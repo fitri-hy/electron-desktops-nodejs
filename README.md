@@ -1,3 +1,5 @@
+<img src="./assets/ss.png">
+
 # Office DataCentral
 
 Office DataCentral adalah template aplikasi desktop yang dirancang untuk kebutuhan backoffice dan manajemen data. Template berbasis teknologi modern seperti Node.js dan alat dukungan lainnya yang menyediakan dasar yang kuat dan fleksibel untuk aplikasi backoffice Anda. Template ini ideal untuk pengembang yang ingin membangun aplikasi desktop dengan fungsionalitas backoffice yang lengkap dan antarmuka pengguna yang responsif.
