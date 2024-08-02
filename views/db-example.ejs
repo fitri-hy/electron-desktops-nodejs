@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="MyraStudio" name="author">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="/css/app.min.css" rel="stylesheet" type="text/css">
+    <script src="/js/head.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<div class="flex wrapper">
+		<%- include('partials/sidebar') %>
+		<div class="page-content">
+			<%- include('partials/header') %>
+			<main class="flex-grow p-6">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-6">
+					<div>
+						<h4 class="text-slate-900 text-lg font-medium mb-2">Database Example</h4>
+					</div>
+				</div>
+				<div class="card overflow-hidden">
+                        <div class="card-header">
+                            <h4 class="card-title">Users Data</h4>
+                        </div>
+                        <div>
+                            <div class="overflow-x-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full divide-y divide-gray-200">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="px-6 py-3 text-start text-sm text-gray-500">
+                                                        ID</th>
+                                                    <th scope="col" class="px-6 py-3 text-start text-sm text-gray-500">
+                                                        Name
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-start text-sm text-gray-500">
+                                                        Email
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-end text-sm text-gray-500">
+                                                        Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+												<% data.forEach(row => { %>
+                                                <tr class="odd:bg-white even:bg-gray-100 hover:bg-gray-100">
+                                                    <td
+                                                        class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                                                       <%= row[0] %></td>
+                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                        <%= row[1] %> </td>
+                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                        <%= row[2] %></td>
+                                                    <td
+                                                        class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                                        <a class="text-primary hover:text-sky-700" href="#">Delete</a>
+                                                    </td>
+                                                </tr>
+												<% }) %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+			</main>
+			<%- include('partials/footer') %>
+		</div>
+	</div>
+    <script src="/libs/simplebar/simplebar.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/iconify-icon/iconify-icon.min.js"></script>
+    <script src="/libs/node-waves/waves.min.js"></script>
+    <script src="/libs/preline/preline.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="/libs/morris.js/morris.min.js"></script>
+    <script src="/libs/raphael/raphael.min.js"></script>
+    <script src="/js/pages/dashboard.js"></script>
+</body>
+</html>
