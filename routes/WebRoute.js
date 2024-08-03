@@ -15,6 +15,12 @@ router.get('/', (req, res) => {
 	});
 });
 
+router.get('/categories', (req, res) => {
+    res.render('categories', { 
+		title: 'Categories Page',
+	});
+});
+
 router.get('/db-example', (req, res) => {
     const data = getData();
     res.render('db-example', { 

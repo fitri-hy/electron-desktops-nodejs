@@ -7,7 +7,7 @@
     "start": "electron .",
     "build-css": "postcss public/css/tailwind.css -o public/css/styles.css",
     "watch-css": "postcss public/css/tailwind.css -o public/css/styles.css --watch",
-    "dev-electron": "nodemon --watch views --exec \"electron .\"",
+    "dev-electron": "nodemon --watch views --watch routes --watch app --watch db --exec \"electron .\"",
     "dev": "concurrently \"npm run watch-css\" \"npm run dev-electron\"",
     "build": "npx electron-builder",
     "create-db": "node db/createDB.js"

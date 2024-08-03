@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="MyraStudio" name="author">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="/css/app.min.css" rel="stylesheet" type="text/css">
+    <script src="/js/head.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
+	<style>
+		.dt-input {
+			padding: 5px 35px 5px 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			color: #333;
+			cursor: pointer;
+			margin-right: 5px;
+			outline: none;
+		}
+		.dt-layout-row .dt-layout-cell {
+			margin-bottom: 10px
+		}
+		.dt-input:focus {
+			outline: none;
+			border: 1px solid #ccc;
+			box-shadow: none;
+		}
+		.dt-paging>nav {
+			display: flex;
+			gap: 10px;
+		}
+		.dt-paging > nav > button {
+		  background-color: rgb(16 185 129 / .1);
+		  color: #16a34a;
+		  border: none;
+		  border-radius: 4px;
+		  padding: 8px 16px;
+		  font-size: 16px;
+		  font-weight: 500;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.dt-paging > nav > button:hover {
+		  background-color: #bbf7d0;
+		}
+		thead {
+			background-color: rgb(16 185 129 / .1);
+		}
+	</style>
+</head>
+<body>
+	<div class="flex wrapper">
+		<%- include('partials/sidebar') %>
+		<div class="page-content">
+			<%- include('partials/header') %>
+			<main class="flex-grow p-6">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-6">
+                    <div>
+                        <h4 class="text-slate-900 text-xl font-bold">Categories</h4>
+                    </div>
+					<a href="#" class="btn bg-primary text-white hover:bg-success hover:shadow-lg">
+						<i class="material-symbols-rounded">add</i> New Category
+					</a>
+                </div>
+				<div class="grid grid-cols-1 gap-6">
+					<div class="border border-default-200 rounded-lg bg-white dark:bg-default-50 h-fit p-6">
+						<div class="overflow-hidden">
+							<table id="example" class="min-w-full divide-y divide-gray-200 border">
+								<thead>
+									<tr>
+										<th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">ID</th>
+										<th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Category Name</th>
+										<th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Action</th>
+									</tr>
+								</thead>
+								<tbody class="bg-white divide-y divide-gray-200">
+									<tr>
+										<td class="px-6 py-4 whitespace-nowrap">5241</td>
+										<td class="px-6 py-4 whitespace-nowrap">System Architect</td>
+										<td class="px-6 py-4 flex gap-4">
+											<a href="#" class="text-primary text-2xl">
+												<i class="material-symbols-rounded">edit</i>
+											</a>
+											<a href="#" class="text-danger text-2xl">
+												<i class="material-symbols-rounded">delete</i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="px-6 py-4 whitespace-nowrap">7754</td>
+										<td class="px-6 py-4 whitespace-nowrap">Accountant</td>
+										<td class="px-6 py-4 flex gap-4">
+											<a href="#" class="text-primary text-2xl">
+												<i class="material-symbols-rounded">edit</i>
+											</a>
+											<a href="#" class="text-danger text-2xl">
+												<i class="material-symbols-rounded">delete</i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</main>
+			<%- include('partials/footer') %>
+		</div>
+	</div>
+	 <script>
+        $(document).ready(function() {
+            new DataTable('#example', {
+				language: {
+					lengthMenu: "_MENU_",
+					search: "",
+				},
+                lengthMenu: [ [10, 20, 30, 40], [10, 20, 30, 40] ],
+                pageLength: 10
+            });
+        });
+    </script>
+	
+    <script src="/libs/simplebar/simplebar.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/iconify-icon/iconify-icon.min.js"></script>
+    <script src="/libs/node-waves/waves.min.js"></script>
+    <script src="/libs/preline/preline.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="/libs/morris.js/morris.min.js"></script>
+    <script src="/libs/raphael/raphael.min.js"></script>
+    <script src="/js/pages/dashboard.js"></script>
+</body>
+</html>
