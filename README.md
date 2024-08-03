@@ -2,19 +2,19 @@
 
 # Office DataCentral
 
-Office DataCentral adalah template aplikasi desktop yang dirancang untuk kebutuhan backoffice dan manajemen data. Template berbasis teknologi modern seperti Node.js dan alat dukungan lainnya yang menyediakan dasar yang kuat dan fleksibel untuk aplikasi backoffice Anda. Template ini ideal untuk pengembang yang ingin membangun aplikasi desktop dengan fungsionalitas backoffice yang lengkap dan antarmuka pengguna yang responsif.
+Office DataCentral is a desktop application template designed for backoffice and data management needs. Templates based on modern technologies such as Node.js and other support tools that provide a strong and flexible foundation for your backoffice applications. This template is ideal for developers who want to build desktop applications with complete backoffice functionality and a responsive user interface.
 
-### Instalasi Template
+### Installation Templates
 
-#### Instalasi:
-- Clone repository dan jalankan `npm install` untuk menginstal semua dependensi yang diperlukan.
-- Jalankan npm run `create-db` untuk membuat dan menginisialisasi database SQLite secara manual di `db/createDB.js`.
+#### Installation:
+- Clone the repository and run `npm install` to install all required dependencies.
+- Run npm run `create-db` to manually create and initialize the SQLite database in `db/createDB.js`.
 
-#### Pengembangan:
-- Gunakan `npm run dev` untuk memulai aplikasi dalam mode pengembangan dengan hot reloading dan melihat perubahan secara langsung.
+#### Development:
+- Use `npm run dev` to start the application in development mode with hot reloading and see changes live.
 
 #### Build:
-- Jalankan `npm run build` untuk membangun aplikasi untuk distribusi dan menghasilkan file instalasi untuk berbagai platform. Hasil build aplikasi akan berada di dalam folder `build` dan siap di produksi.
+- Run `npm run build` to build the application for distribution and generate installation files for various platforms. The application build results will be in the `build` folder and ready for production.
 
-#### Menjalankan Aplikasi:
-- Gunakan `npm start` untuk menjalankan aplikasi Electron dan mengakses antarmuka template dasar backoffice.
+#### Running Application:
+- Use `npm start` to run Electron applications and access the basic backoffice template interface.
